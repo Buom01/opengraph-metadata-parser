@@ -17,7 +17,7 @@ function convertName(_, name)
 
 function unescape(str)
 {
-  // Replace &amp; would be catch by nextly regex
+  // FIXME: Replaced &amp; could be catch by the followed RegEx
   return (
     str
       .replace(/&#x([0-9a-z]{1,16});/gi, convertBaseTen)
