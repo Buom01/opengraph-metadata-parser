@@ -7,13 +7,16 @@ $ npm i --save opengraph-metadata-parser
 ```
 ## API
 ### parsePage (exported as default)
-Arguments: html, baseUrl
-Return value: Object
-Description:
-Take `html` source-code of a page along its `baseUrl` which is the website main URL with the proto (as https://) but without the trailing slash.
-It return an Object with key that are independant and may be `undefined`, `String`, and sometime `Integer`, `Array` of `String`.
 
-Possible return keys are:
+Arguments: (html, baseUrl)
+
+Return value: Object
+
+Description:
+> Take `html` source-code of a page along its `baseUrl` which is the website main URL with the proto (as https://) but without the trailing slash.
+> It return an Object with key that are independant and may be `undefined`, `String`, and sometime `Integer`, `Array` of `String`.
+
+Possible returned keys are:
 - `title`
 - `type` (from "og:type")
 - `url` (page URL in a convenient format)
