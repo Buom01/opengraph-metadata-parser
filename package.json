@@ -1,0 +1,52 @@
+{
+  "name": "opengraph-metadata-parser",
+  "version": "1.0.0",
+  "description": "Parse HTML metadata (including opengraph one) in plain cross-environnement JavaScript",
+  "source": "./src/index.js",
+  "main": "./dist/index.js",
+  "exports": "dist/index.modern.js",
+  "module": "dist/index.module.js",
+  "unpkg": "dist/index.umd.js",
+  "scripts": {
+    "test": "npm run lint && npm run cover",
+    "test:only": "microbundle --target node && mocha --recursive test --require babel-core/register",
+    "cover": "nyc --check-coverage npm run test:only",
+    "lint": "eslint src test --fix",
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "prepublish": "npm run test && npm run build"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Buom01/opengraph-metadata-parser.git"
+  },
+  "keywords": [
+    "opengraph",
+    "metadata",
+    "node",
+    "browser",
+    "parsing",
+    "javascript"
+  ],
+  "author": "Bastien Adam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Buom01/opengraph-metadata-parser/issues"
+  },
+  "homepage": "https://github.com/Buom01/opengraph-metadata-parser#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-add-module-exports": "^1.0.4",
+    "babel-preset-env": "^1.7.0",
+    "character-entities": "^2.0.0",
+    "eslint": "^7.25.0",
+    "microbundle": "^0.13.0",
+    "mocha": "^6.2.3",
+    "nyc": "^13.3.0"
+  },
+  "dependencies": {}
+}
